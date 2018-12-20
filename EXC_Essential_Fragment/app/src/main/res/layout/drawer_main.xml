@@ -1,0 +1,81 @@
+<android.support.v4.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <!--
+	As the main content view, the view below consumes the entire
+	space available using match_parent in both dimensions.
+    -->
+	<LinearLayout
+		android:id="@+id/mainPane_LinearLayout"
+		android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:orientation="vertical">
+		
+		<FrameLayout
+        	android:id="@+id/container"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+			android:layout_weight="1" />
+	
+	
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:gravity="center"
+			android:layout_weight="1" >
+			
+		 	<net.nend.android.NendAdView
+				android:id="@+id/nend"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				NendApiKey="e531f7ffe53d328059d8720579623a74468bd21e"
+				NendSpotId="786266" />
+		</LinearLayout>
+		
+	</LinearLayout>
+
+	
+	<LinearLayout
+		android:id="@+id/drawer_mainLinearLayout"
+		android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="wrap_content"
+		android:layout_gravity="start"
+		android:orientation="vertical"
+        >
+		<LinearLayout
+			android:id="@+id/drawer_HeadLay"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/navigation_header_height"
+			android:background="@drawable/ic_launcher"
+			android:orientation="vertical"
+			>
+			<TextView
+				android:id="@+id/drawer_Head_TXT1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="HogeHoge"
+			/>
+			<TextView
+				android:id="@+id/drawer_Head_TXT2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="NikoNiko"
+			/>
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/drawer_ListFrgLay"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			>
+		</LinearLayout>
+		
+		
+	</LinearLayout>
+	
+	
+</android.support.v4.widget.DrawerLayout>
