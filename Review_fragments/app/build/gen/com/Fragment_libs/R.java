@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.Review_fragments;
+package com.Fragment_libs;
 
 public final class R {
     public static final class attr {

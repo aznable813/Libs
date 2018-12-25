@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.Review_fragments;
+package android.support.v4;
 
 public final class R {
     public static final class attr {

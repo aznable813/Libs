@@ -1,13 +1,13 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.0"
 
     defaultConfig {
-        applicationId "com.Review_fragments"
-        minSdkVersion 19
-        targetSdkVersion 23
+        applicationId "com.Fragment_libs"
+        minSdkVersion 14
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }
@@ -20,7 +20,5 @@ android {
 }
 
 dependencies {
-	compile 'com.android.support:support-v4:27.+'
-	compile project(':Fragment_libs')
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
