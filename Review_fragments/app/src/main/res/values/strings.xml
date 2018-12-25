@@ -4,4 +4,7 @@
     <string name="app_name">Review_fragments</string>
     <string name="hello_world">ww DELL&amp;Cloneしかないのかな</string>
 	<string name="btn_lbl_action">アクションボタン</string>
+	<string name="mainF_text">FragmentのLessonだわさ</string>
+	<string name="mainF_btn_lbl">Fragmentのボタン</string>
+	<string name="mainF_ChgText">ボタンが押されたよ</string>
 </resources>
