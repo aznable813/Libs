@@ -6,6 +6,7 @@ import android.view.*;
 import android.widget.*;
 import android.view.View.*;
 import android.support.annotation.*;
+import android.graphics.Color;
 
 
 // Succeed to Fragment Class
@@ -15,10 +16,15 @@ public class MainFragment extends Fragment
 	//Bundle Keys
 	private final static String KEY_NAME = "key_name";
 	private final static String KEY_BKGROUND = "bg_color";
+	//Bundle Default
+	private String tranDef_name = "";
+	private @ColorInt int tranDef_Bgcolor = Color.TRANSPARENT;
 	
+
 	//The "text" that chages when you click button
 	private TextView ChgTxt;
 
+	
 	@CheckResult  // Force to create this class WITH THIS METHOD
 	public static MainFragment createInstance(String strName, @ColorInt int color){
  		//##  Create Fragment which has bundle-data
@@ -41,8 +47,20 @@ public class MainFragment extends Fragment
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
+		// you get bundle-data here(onCreate) 
+		
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
+		
+		//get Bundle
+		Bundle getArgs = getArguments();
+		
+		//check null in bundle
+		if(getArgs != null){
+			tranDef_name = getArgs.getString(KEY_NAME,"");
+			tranDef_Bgcolor=getArgs.getInt(KEY_BKGROUND,Color.TRANSPARENT);
+		}
+		
 	}
 	
 	
@@ -66,13 +84,14 @@ public class MainFragment extends Fragment
 		
 		//relate ChgTxt with "mainF_txt"-Textview
 		ChgTxt = (TextView) view.findViewById(R.id.mainF_txt);
+		view.setBackgroundColor(tranDef_Bgcolor);
 		
 		//Set new onclicklistener
 		view.findViewById(R.id.mainF_Btn).setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v){
 				// Change text When you click this button
-				ChgTxt.setText(R.string.mainF_ChgText);
+				ChgTxt.setText(tranDef_name);
 			}
 			
 		});
