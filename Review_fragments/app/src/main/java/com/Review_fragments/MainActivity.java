@@ -16,17 +16,16 @@ public class MainActivity extends AppCompatActivity
 		
 		
 		// create Fragment from MainFragment-class(Self made)
-		MainFragment testFrgmnt = new MainFragment();
-		
+		//MainFragment testFrgmnt = new MainFragment();
+	
 		// Ctrate FragmentTransaction
 		FragmentTransaction frantran = getSupportFragmentManager().beginTransaction();
 		
-		
 		//★★★ First of all, this is just an action to add fragment
-		frantran.add(R.id.conta,testFrgmnt);
+		frantran.add(R.id.conta,new MainFragment());
+		frantran.add(R.id.conta,new MainFragment());
+		// reflecting the setting of Fragment
 		frantran.commit();
-		
-		
 		
     }
 }
